@@ -1,0 +1,4 @@
+---
+# Redhat os specific variables
+httpd_package: httpd
+httpd_modules: []

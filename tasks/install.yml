@@ -1,0 +1,8 @@
+---
+# Tasks to install httpd
+- name: Install | Install httpd
+  action: "{{ansible_pkg_mgr}} state=installed name={{httpd_package}}"
+
+- name: Install | Install modules
+  action: "{{ansible_pkg_mgr}} state=installed name={{item}}"
+  with_items: httpd_modules
