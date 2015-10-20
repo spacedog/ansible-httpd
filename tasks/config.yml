@@ -7,5 +7,3 @@
     line: "{{item.key}} {{item.value}}"
     regexp: "^{{item.key}}"
   with_dict:  "{{httpd_config}}"
-
-

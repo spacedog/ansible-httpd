@@ -1,8 +1,5 @@
 ---
 # defaults file for httpd
-httpd_config:
-  Listen: 8080
-  User: apache
-  Group: apache
+httpd_config: {}
 
 
