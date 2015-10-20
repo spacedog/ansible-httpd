@@ -7,3 +7,10 @@
     line: "{{item.key}} {{item.value}}"
     regexp: "^{{item.key}}"
   with_dict:  "{{httpd_config}}"
+
+- name: Config | Set virtual hosts
+  template:
+    state: present
+    dest: "{{httpd_conf_d}}/{{item.key}}.conf"
+    src: vhost.conf.j2
+  with_dict: "{{httpd_vhosts}}"

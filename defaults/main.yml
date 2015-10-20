@@ -1,5 +1,6 @@
 ---
 # defaults file for httpd
 httpd_config: {}
+httpd_vhosts: {}
 
 

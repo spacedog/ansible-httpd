@@ -3,3 +3,4 @@
 httpd_package: httpd
 httpd_modules: []
 httpd_main_config_path: /etc/httpd/conf/httpd.conf
+httpd_conf_d: /etc/httpd/conf.d
