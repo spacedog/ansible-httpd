@@ -1,0 +1,11 @@
+---
+- name: Config |  Set configuration options
+  lineinfile:
+    state: present
+    backup: yes
+    dest: "{{httpd_main_config_path}}"
+    line: "{{item.key}} {{item.value}}"
+    regexp: "^{{item.key}}"
+  with_dict:  "{{httpd_config}}"
+
+

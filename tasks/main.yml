@@ -6,5 +6,5 @@
 
 # Include tasks
 - include: install.yml
-#- include: configure.yml
+- include: config.yml
 #- include: service.yml

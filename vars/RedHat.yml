@@ -2,3 +2,4 @@
 # Redhat os specific variables
 httpd_package: httpd
 httpd_modules: []
+httpd_main_config_path: /etc/httpd/conf/httpd.conf
