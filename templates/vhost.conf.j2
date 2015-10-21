@@ -1,0 +1,15 @@
+<VirtualHost {{item.value.addr}}:{{item.value.port}}>
+{% for key,value in item.value.directives.iteritems() %}
+  {{key}} {{value}}
+{% endfor %}
+
+{% if item.value.directories %}
+{% for key,value in item.value.directories.iteritems() %}
+  <Directory {{key}}>
+{% for okey,ovalue in value.iteritems() %}
+    {{okey}} {{ovalue}}
+{% endfor %}
+  </Directory>
+{% endfor %}
+{% endif %}
+</VirtualHost>

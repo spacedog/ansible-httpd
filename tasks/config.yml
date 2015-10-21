@@ -10,7 +10,12 @@
 
 - name: Config | Set virtual hosts
   template:
-    state: present
     dest: "{{httpd_conf_d}}/{{item.key}}.conf"
     src: vhost.conf.j2
+  with_dict: "{{httpd_vhosts}}"
+
+- name: Config | Create vhosts DocumentRoots
+  file:
+    state: directory
+    path: "{{item.value.directives.DocumentRoot}}"
   with_dict: "{{httpd_vhosts}}"
